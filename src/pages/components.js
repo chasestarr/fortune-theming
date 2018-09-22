@@ -8,8 +8,8 @@ import { getCustomProperty } from '../utils'
 export default () => (
   <div>
     <Block
-      nav="alert"
-      title="Alert"
+      nav="alert.css"
+      title="alert.css"
       demo={() => (
         <div>
           <p className="code pad1">
