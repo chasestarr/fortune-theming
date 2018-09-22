@@ -14,7 +14,7 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <div className="cols isFull">
-      <div className="col2 bgSmoke padX3">
+      <div className="col2 bgSmoke">
         <ul className="sticky top2">
           <li>
             <a href="/" className="h3">
