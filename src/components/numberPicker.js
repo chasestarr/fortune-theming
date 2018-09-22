@@ -21,7 +21,7 @@ class NumberPicker extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="small">
         <label>{this.props.name}</label>
         <input onChange={this.onChange} value={this.state.value} />
       </div>
