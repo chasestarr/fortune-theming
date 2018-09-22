@@ -36,5 +36,66 @@ export default () => (
         </div>
       )}
     />
+
+    <Block
+      nav="installation"
+      title="Installation"
+      body={() => (
+        <div>
+          <p>
+            There are a few ways to use Fortune. You can use the CDN, install it
+            from NPM or download it.
+          </p>
+          <p className="bold">Load from CDN</p>
+          <p className="code pad1 marB2">
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/fortune-css/dist/fortune.min.css"
+          </p>
+          <p className="bold">Install from NPM</p>
+          <p className="code pad1 marB2">npm install fortune-css</p>
+          <p className="bold">Use manually</p>
+          <p>
+            <a href="https://github.com/atav1k/fortune/archive/master.zip">
+              Download
+            </a>
+          </p>
+          <p>
+            Fortune uses postcss and gulp to generate autoprefixed CSS should
+            you want to build your own components.
+          </p>
+          <p className="code pad1 marB2">
+            npm install
+            <br />
+            gulp build
+          </p>
+        </div>
+      )}
+    />
+
+    <Block
+      nav="theming"
+      title="Theming"
+      body={() => (
+        <div>
+          <p>
+            Since Fortune is based on CSS proporties, theming is simple. Simply
+            add :root or :scope definitions to your CSS.
+          </p>
+          <p className="code pad1 marB2">
+            {`:root {`}
+            <div className="marL1">
+              {`--font-family: 'Roboto', sans-serif;`}
+              <br />
+              {`--headings-font-family: 'Roboto', sans-serif;`}
+              <br />
+              {`--container-width: 125em;`}
+              <br />
+              {`--column-gutter: var(--space-4);`}
+            </div>
+            {`}`}
+          </p>
+        </div>
+      )}
+    />
   </div>
 )
