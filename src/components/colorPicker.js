@@ -7,11 +7,23 @@ class ColorPicker extends React.Component {
   constructor(props) {
     super(props)
 
-    const color = getCustomProperty(props.name)
-
     this.state = {
       displayColorPicker: false,
-      color: color ? color : props.fallbackValue,
+      color: '',
+    }
+  }
+
+  componentDidMount() {
+    const color = getCustomProperty(this.props.name)
+    if (color) {
+      this.setState({ color })
+    }
+  }
+
+  componentDidUpdate(_, prevState) {
+    if (this.state.color) return
+    if (this.props.fallbackValue !== prevState.color) {
+      this.setState({ color: this.props.fallbackValue })
     }
   }
 

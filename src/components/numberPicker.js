@@ -6,10 +6,22 @@ class NumberPicker extends React.Component {
   constructor(props) {
     super(props)
 
-    const value = getCustomProperty(props.name)
-
     this.state = {
-      value: value ? value : props.fallbackValue,
+      value: '',
+    }
+  }
+
+  componentDidMount() {
+    const value = getCustomProperty(this.props.name)
+    if (value) {
+      this.setState({ value })
+    }
+  }
+
+  componentDidUpdate(_, prevState) {
+    if (this.state.value) return
+    if (this.props.fallbackValue !== prevState.value) {
+      this.setState({ value: this.props.fallbackValue })
     }
   }
 
