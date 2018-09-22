@@ -12,9 +12,9 @@ export default () => (
         <p>
           Position makes use of Custom Property fallback values. In regular use
           .mar and .pad follow a scale from 1-9 of 1rem-16rem. An element can
-          use gap spacing by adding the modifier class .isGap which follow a
+          use gap spacing with the modifier class .isGap. Gap follow a
           scale from 1-9 of 0.0625rem-2rem. Children elements of .isGap default
-          to standard spacing. Gap values should never be assigned in :root as
+          to standard spacing. Unlike space properties (--space-1), gap properties (--gap-1) should never be assigned in :root since
           fallbacks in Fortune rely on empty initial states.
         </p>
       )}
@@ -29,13 +29,9 @@ export default () => (
           <p className="marL7">marL7</p>
           <p className="marL8">marL8</p>
           <p className="marL9">marL9</p>
-          <div className="grid gridCols4 gridSpace1">
-            <div>mar1</div>
-            <div>mar1</div>
-            <div>mar1</div>
-          </div>        
         </div>
       )}
+      reference={['mar1', 'mar2', 'mar3', 'mar4', 'mar5', 'mar6', 'mar7', 'mar8', 'mar9', 'marT1', 'marR1', 'marB1', 'marL1', 'marX1', 'marY1', 'marXAuto', 'pad1', 'pad2', 'pad3', 'pad4', 'pad5', 'pad6', 'pad7', 'pad8', 'pad9']}
       editor={() => (
         <div>
           <NumberPicker name="--space-1" />
