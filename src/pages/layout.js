@@ -11,8 +11,8 @@ export default () => (
       body={() => (
         <p>
           Position makes use of Custom Property fallback values. In regular use
-          they follow they follow a scale from 1-9 of 1rem-16rem. An element can
-          use gap spacing by adding the modifier class isGap which follow a
+          .mar and .pad follow a scale from 1-9 of 1rem-16rem. An element can
+          use gap spacing by adding the modifier class .isGap which follow a
           scale from 1-9 of 0.0625rem-2rem. Children elements of .isGap default
           to standard spacing. Gap values should never be assigned in :root as
           fallbacks in Fortune rely on empty initial states.
@@ -20,18 +20,72 @@ export default () => (
       )}
       demo={() => (
         <div>
-          <p className="marL1 isGap">marL0 isGap</p>
-          <p className="marL4 isGap">marL4 isGap</p>
           <p className="marL1">marL1</p>
+          <p className="marL2">marL2</p>
+          <p className="marL3">marL3</p>
           <p className="marL4">marL4</p>
+          <p className="marL5">marL5</p>
+          <p className="marL6">marL6</p>
+          <p className="marL7">marL7</p>
+          <p className="marL8">marL8</p>
+          <p className="marL9">marL9</p>
+          <div className="grid gridCols4 gridSpace1">
+            <div>mar1</div>
+            <div>mar1</div>
+            <div>mar1</div>
+          </div>        
         </div>
       )}
       editor={() => (
         <div>
           <NumberPicker name="--space-1" />
+          <NumberPicker name="--space-2" />
+          <NumberPicker name="--space-3" />
           <NumberPicker name="--space-4" />
+          <NumberPicker name="--space-5" />
+          <NumberPicker name="--space-6" />
+          <NumberPicker name="--space-7" />
+          <NumberPicker name="--space-8" />
+          <NumberPicker name="--space-9" />          
         </div>
       )}
     />
+    <Block
+      nav="dimension.css"
+      title="dimension.css"
+      body={() => (
+        <p>
+          Dimension makes use of Custom Property fallback values to specify height, width, and viewport height and viewport width, .ht, .wid, .viewHt, .viewWid. In regular use
+          .ht and .wid follow a scale from 1-9 of 1rem-16rem. An element can
+          use gap spacing by adding the modifier class .isGap which follow a
+          scale from 1-9 of 0.0625rem-2rem. Children elements of .isGap default
+          to standard spacing. Gap values should never be assigned in :root as
+          fallbacks in Fortune rely on empty initial states.
+        </p>
+      )}
+      demo={() => (
+        <div>
+          <p className="wid2 bgLight">wid2</p>
+          <p className="wid4 bgLight">wid4</p>
+          <p className="wid6 bgLight">wid6</p>
+          <p className="ht2 bgLight">ht2</p>
+          <p className="ht4 bgLight">ht4</p>
+          <p className="viewWid25 bgLight">wid6</p>
+        </div>
+      )}
+      editor={() => (
+        <div>
+          <NumberPicker name="--space-1" />
+          <NumberPicker name="--space-2" />
+          <NumberPicker name="--space-3" />
+          <NumberPicker name="--space-4" />
+          <NumberPicker name="--space-5" />
+          <NumberPicker name="--space-6" />
+          <NumberPicker name="--space-7" />
+          <NumberPicker name="--space-8" />
+          <NumberPicker name="--space-9" />          
+        </div>
+      )}
+    />    
   </div>
 )
