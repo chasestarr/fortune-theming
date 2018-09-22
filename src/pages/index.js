@@ -36,5 +36,42 @@ export default () => (
         </div>
       )}
     />
+
+    <Block
+      nav="installation"
+      title="Installation"
+      body={() => (
+        <div>
+          <p>
+            There are a few ways to use Fortune. You can use the CDN, install it
+            from NPM or download it.
+          </p>
+          <p className="bold">Load from CDN</p>
+          <p>
+            <code className="pad1 marB2">
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/fortune-css/dist/fortune.min.css"
+            </code>
+          </p>
+          <p className="bold">Install from NPM</p>
+          <p>
+            <code className="pad1 marB2">npm install fortune-css</code>
+          </p>
+          <p className="bold">Use manually</p>
+          <p>
+            <a href="https://github.com/atav1k/fortune/archive/master.zip">
+              Download
+            </a>
+          </p>
+          <p>
+            Fortune uses postcss and gulp to generate autoprefixed CSS should
+            you want to build your own components.
+          </p>
+          <p>
+            <code className="pad1 marB2">npm install && gulp build</code>
+          </p>
+        </div>
+      )}
+    />
   </div>
 )
