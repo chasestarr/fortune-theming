@@ -12,6 +12,7 @@ const IndexPage = () => (
     <div className="col8">
       <h3>Alert</h3>
       <div>
+        <div className="alert">Default</div>
         {states.map(state => (
           <div className={`alert bg${state.upper}`}>{state.upper}</div>
         ))}
