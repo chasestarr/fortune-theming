@@ -27,7 +27,7 @@ const Layout = ({ children, data }) => (
             </a>
           </li>
           <li className="marL4 marB4 isGap">
-            <a href="/#install" className="gray bold">
+            <a href="/#installation" className="gray bold">
               Install
             </a>
           </li>
