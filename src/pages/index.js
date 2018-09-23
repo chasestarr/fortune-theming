@@ -49,12 +49,11 @@ export default () => (
             from NPM or download it.
           </p>
           <p className="bold">Load from CDN</p>
-          <p className="code pad1 marB2">
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/fortune.css/dist/fortune.min.css"
+          <p className="code pad1 marB2 maxWid100 padReset">
+            unpkg.com/fortune.css/dist/fortune.css
           </p>
           <p className="bold">Install from NPM</p>
-          <p className="code pad1 marB2">npm install fortune.css</p>
+          <p className="code pad1 marB2 maxWid100 padReset">npm install fortune.css</p>
           <p className="bold">Use manually</p>
           <p>
             <a href="https://github.com/atav1k/fortune/archive/master.zip">
@@ -65,7 +64,7 @@ export default () => (
             Fortune uses postcss and gulp to generate autoprefixed CSS should
             you want to build your own components.
           </p>
-          <p className="code pad1 marB2">
+          <p className="code pad1 marB2 maxWid100 padReset">
             npm install
             <br />
             npm run build
@@ -83,7 +82,7 @@ export default () => (
             Since Fortune is based on CSS proporties, theming is simple. Simply
             add :root or :scope definitions to your CSS.
           </p>
-          <p className="code pad1 marB2">
+          <p className="code pad1 marB2 maxWid100 padReset">
             {`:root {`}
             <div className="marL1">
               {`--font-family: 'Roboto', sans-serif;`}
@@ -105,7 +104,7 @@ export default () => (
       demo={() => (
         <div>
           <h4>Colors</h4>
-          <div className="grid gridCols4 gridGap1 white marB2">
+          <div className="grid gridCols4 gridGap1 white marB2 maxWid100">
             <div className="bgRed">--red</div>
             <div className="bgPink">--pink</div>
             <div className="bgGrape">--grape</div>

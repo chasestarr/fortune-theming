@@ -9,3 +9,13 @@ $variable-columns: false;
 .grid div {
   padding: 0.25rem;
 }
+
+.code {
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 48rem) {
+  :root {
+    font-size: 14px;
+  }
+}
