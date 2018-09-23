@@ -1,15 +1,15 @@
 import React from 'react'
 
 export default props => (
-  <div className="cols padT2 marB3" id={props.nav}>
+  <div className="cols padT2 marB2" id={props.nav}>
     <div className="col8">
-      <p className="h4">{props.title}</p>
+      <p className="h3 grape">{props.title}</p>
       <div>{props.body && props.body()}</div>
       <div>{props.demo && props.demo()}</div>
       {props.reference && props.reference.length && (
-      <div className="grid gridCols4 gridGap4 isGap">
+      <div className="grid gridCols2 code">
         {props.reference.map(ref => (
-          <div className="bgLight pad3 isGap">{ref}</div>
+          <div>{ref}</div>
         ))}
       </div>
       )}

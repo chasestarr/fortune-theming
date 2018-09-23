@@ -1,15 +1,17 @@
 import React from 'react'
 
 import Block from '../components/block'
+import logo from '../assets/crystal.svg'
 
 export default () => (
   <div>
+    <img className="marT2 wid25" src={logo}/>
     <Block
       nav="introduction"
-      title="Introduction"
+      title=""
       body={() => (
         <p className="h4">
-          Fortune.css is a friendly CSS variables driven library. It is light,
+          Fortune.css is a simple CSS variables driven library. It is light,
           customizable and needs no preprocessor builds.
         </p>
       )}
@@ -47,12 +49,11 @@ export default () => (
             from NPM or download it.
           </p>
           <p className="bold">Load from CDN</p>
-          <p className="code pad1 marB2">
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/fortune-css/dist/fortune.min.css"
+          <p className="code pad1 marB2 maxWid100 padReset">
+            unpkg.com/fortune.css/dist/fortune.css
           </p>
           <p className="bold">Install from NPM</p>
-          <p className="code pad1 marB2">npm install fortune-css</p>
+          <p className="code pad1 marB2 maxWid100 padReset">npm install fortune.css</p>
           <p className="bold">Use manually</p>
           <p>
             <a href="https://github.com/atav1k/fortune/archive/master.zip">
@@ -63,10 +64,10 @@ export default () => (
             Fortune uses postcss and gulp to generate autoprefixed CSS should
             you want to build your own components.
           </p>
-          <p className="code pad1 marB2">
+          <p className="code pad1 marB2 maxWid100 padReset">
             npm install
             <br />
-            gulp build
+            npm run build
           </p>
         </div>
       )}
@@ -81,7 +82,7 @@ export default () => (
             Since Fortune is based on CSS proporties, theming is simple. Simply
             add :root or :scope definitions to your CSS.
           </p>
-          <p className="code pad1 marB2">
+          <p className="code pad1 marB2 maxWid100 padReset">
             {`:root {`}
             <div className="marL1">
               {`--font-family: 'Roboto', sans-serif;`}
@@ -97,5 +98,42 @@ export default () => (
         </div>
       )}
     />
+    <Block
+      nav="tokens"
+      title="Tokens"
+      demo={() => (
+        <div>
+          <h4>Colors</h4>
+          <div className="grid gridCols4 gridGap1 white marB2 maxWid100">
+            <div className="bgRed">--red</div>
+            <div className="bgPink">--pink</div>
+            <div className="bgGrape">--grape</div>
+            <div className="bgViolet">--violet</div>
+            <div className="bgIndigo">--indigo</div>
+            <div className="bgBlue">--blue</div>
+            <div className="bgCyan">--cyan</div>
+            <div className="bgTeal">--teal</div>
+            <div className="bgGreen">--green</div>
+            <div className="bgLime">--lime</div>
+            <div className="bgYellow">--yellow</div>
+            <div className="bgOrange">--orange</div>
+            <div className="bgPrimary">--state-primary</div>
+            <div className="bgSecondary">--state-secondary</div>
+            <div className="bgSuccess">--state-success</div>
+            <div className="bgInfo">--state-info</div>
+            <div className="bgWarning">--state-warning</div>
+            <div className="bgDanger">--state-danger</div>
+            <div className="bgDisabled">--state-disabled</div>
+            <div className="bgWhite gray">--white</div>
+            <div className="bgSmoke gray">--smoke</div>
+            <div className="bgLight gray">--light</div>
+            <div className="bgSilver">--silver</div>
+            <div className="bgDark">--dark</div>
+            <div className="bgGray">--gray</div>
+            <div className="bgBlack">--black</div>
+          </div>          
+        </div>
+      )}
+      reference={['--space-0', '--hdg', '--media-hdg', '--columns-width', '--column-gutter', '--column-gap', '--border-width', '--component-bg-color', '--component-border-color', '--component-border-radius', '--component-border-width', '--component-focus', '--component-speed', '--component-shadow', '--component-margin-bottom', '--component-padding', '--darken', '--darken-more', '--lighten', '--lighten-more','--shadow','--shadow-more']}    />
   </div>
 )

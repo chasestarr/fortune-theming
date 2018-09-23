@@ -34,7 +34,7 @@ class NumberPicker extends React.Component {
   render() {
     return (
       <div className="small inputGroup">
-        <span className="inputAddon">{this.props.name}</span>
+        <span className="inputAddon wid100">{this.props.name}</span>
         <input onChange={this.onChange} value={this.state.value} />
       </div>
     )

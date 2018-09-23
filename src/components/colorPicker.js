@@ -42,9 +42,10 @@ class ColorPicker extends React.Component {
               displayColorPicker: !prev.displayColorPicker,
             }))
           }
-          className="bordWhite small"
+          className="small marB1 wid100"
           style={{
             backgroundColor: this.state.color,
+            borderColor: this.state.color,
             '--button-padding': '0.25rem 0.5rem',
           }}
         >

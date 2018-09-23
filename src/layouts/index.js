@@ -15,12 +15,7 @@ const Layout = ({ children, data }) => (
     />
     <div className="cols isFull">
       <div className="col2 bgSmoke">
-        <ul className="sticky top2">
-          <li>
-            <a href="/" className="h3">
-              🔮
-            </a>
-          </li>
+        <ul className="sticky top2 padX2 padReset hide">
           <li className="marB4 isGap">
             <a href="/#introduction" className="gray bold">
               Introduction
@@ -41,19 +36,24 @@ const Layout = ({ children, data }) => (
               Variables
             </a>
           </li>
+          <li className="marL4 marB4 isGap">
+            <a href="/#tokens" className="gray bold">
+              Tokens
+            </a>
+          </li>
           <li className="marB4 isGap">
-            <a href="/layout" className="gray bold">
+            <a className="gray bold isDisabled">
               Layout
             </a>
           </li>
 
           <li className="marB4 isGap">
-            <a href="/components" className="gray bold">
+            <a className="gray bold isDisabled">
               Components
             </a>
           </li>
           <li className="marB4 isGap">
-            <a href="/utilities" className="gray bold">
+            <a className="gray bold isDisabled">
               Utilities
             </a>
           </li>
@@ -65,7 +65,11 @@ const Layout = ({ children, data }) => (
           </li>
         </ul>
       </div>
-      <div className="col10">{children()}</div>
+      <div className="col10">
+        <div className="padX2 padReset">
+          {children()}
+        </div>
+      </div>
     </div>
   </div>
 )

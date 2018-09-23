@@ -1,2 +1,21 @@
 $variable-columns: false;
 @import '~fortune.css';
+:root {
+  --component-margin-bottom: 1rem;
+  --p-margin: 1rem;
+  font-size: 16px;
+}
+
+.grid div {
+  padding: 0.25rem;
+}
+
+.code {
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 48rem) {
+  :root {
+    font-size: 14px;
+  }
+}
