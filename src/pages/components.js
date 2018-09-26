@@ -180,6 +180,38 @@ export default class Components extends React.Component {
           demo={() => (
             <div>
               <p className="code pad1">
+                {`<div className="nav">`}
+                <div className="padL1">
+                  {`<div class="navLeft">Left</div>`}
+                  <br />
+                  {`<div class="navCenter">Center</div>`}
+                  <br />
+                  {`<div class="navRight">Right</div>`}
+                </div>
+                {`</div>`}
+              </p>
+              <div className="nav">
+                <div className="navLeft">Left</div>
+                <div className="navCenter">Center</div>
+                <div className="navRight">Right</div>
+              </div>
+            </div>
+          )}
+          editor={() => (
+            <div>
+              <NumberPicker name="--nav-height" />
+              <NumberPicker name="--nav-padding" />
+              <ColorPicker name="--nav-link-color" />
+            </div>
+          )}
+        />
+
+        <Block
+          nav="tab.css"
+          title="tab.css"
+          demo={() => (
+            <div>
+              <p className="code pad1">
                 {`<div class="chip">Default</div>`}
                 <br />
               </p>
