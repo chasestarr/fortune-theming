@@ -260,6 +260,134 @@ export default class Components extends React.Component {
             </div>
           )}
         />
+
+        <Block
+          nav="table.css"
+          title="table.css"
+          demo={() => (
+            <div>
+              <p className="code pad1">
+                {`<table>...</table>`}
+                <br />
+                {`<table class="isBordered">...</table>`}
+                <br />
+                {`<table class="isStriped">...</table>`}
+                <br />
+                {`<table class="isHoverable">...</table>`}
+              </p>
+              <table>
+                <tr>
+                  <th>Default A</th>
+                  <th>Default B</th>
+                  <th>Default C</th>
+                </tr>
+                <tr>
+                  <td>element 1:a</td>
+                  <td>element 1:b</td>
+                  <td>element 1:c</td>
+                </tr>
+                <tr>
+                  <td>element 2:a</td>
+                  <td>element 2:b</td>
+                  <td>element 2:c</td>
+                </tr>
+                <tr>
+                  <td>element 3:a</td>
+                  <td>element 3:b</td>
+                  <td>element 3:c</td>
+                </tr>
+              </table>
+
+              <table className="isBordered">
+                <tr>
+                  <th>Bordered A</th>
+                  <th>Bordered B</th>
+                  <th>Bordered C</th>
+                </tr>
+                <tr>
+                  <td>element 1:a</td>
+                  <td>element 1:b</td>
+                  <td>element 1:c</td>
+                </tr>
+                <tr>
+                  <td>element 2:a</td>
+                  <td>element 2:b</td>
+                  <td>element 2:c</td>
+                </tr>
+                <tr>
+                  <td>element 3:a</td>
+                  <td>element 3:b</td>
+                  <td>element 3:c</td>
+                </tr>
+              </table>
+
+              <table className="isStriped">
+                <tr>
+                  <th>Striped A</th>
+                  <th>Striped B</th>
+                  <th>Striped C</th>
+                </tr>
+                <tr>
+                  <td>element 1:a</td>
+                  <td>element 1:b</td>
+                  <td>element 1:c</td>
+                </tr>
+                <tr>
+                  <td>element 2:a</td>
+                  <td>element 2:b</td>
+                  <td>element 2:c</td>
+                </tr>
+                <tr>
+                  <td>element 3:a</td>
+                  <td>element 3:b</td>
+                  <td>element 3:c</td>
+                </tr>
+                <tr>
+                  <td>element 4:a</td>
+                  <td>element 4:b</td>
+                  <td>element 4:c</td>
+                </tr>
+              </table>
+
+              <table className="isHoverable">
+                <tr>
+                  <th>Hoverable A</th>
+                  <th>Hoverable B</th>
+                  <th>Hoverable C</th>
+                </tr>
+                <tr>
+                  <td>element 1:a</td>
+                  <td>element 1:b</td>
+                  <td>element 1:c</td>
+                </tr>
+                <tr>
+                  <td>element 2:a</td>
+                  <td>element 2:b</td>
+                  <td>element 2:c</td>
+                </tr>
+                <tr>
+                  <td>element 3:a</td>
+                  <td>element 3:b</td>
+                  <td>element 3:c</td>
+                </tr>
+              </table>
+            </div>
+          )}
+          editor={() => (
+            <div>
+              <NumberPicker name="--table-spacing-y" />
+              <NumberPicker name="--table-border-width" />
+              <NumberPicker name="--table-border-color" />
+              <NumberPicker name="--table-spacing-y" />
+              <NumberPicker name="--table-spacing-x" />
+              <ColorPicker name="--table-bg-color" />
+              <ColorPicker name="--table-header-bg-color" />
+              <ColorPicker name="--table-border-color" />
+              <ColorPicker name="--table-hover-bg-color" />
+              <ColorPicker name="--table-stripe-bg-color" />
+            </div>
+          )}
+        />
       </div>
     )
   }
