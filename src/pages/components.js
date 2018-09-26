@@ -29,13 +29,13 @@ export default class Components extends React.Component {
           demo={() => (
             <div>
               <p className="code pad1">
-                {`<div className="alert">Default</div>`}
+                {`<div class="alert">Default</div>`}
                 <br />
-                {`<div className="alert bgPrimary">Primary</div>`}
+                {`<div class="alert bgPrimary">Primary</div>`}
                 <br />
-                {`<div className="alert bgSuccess">Success</div>`}
+                {`<div class="alert bgSuccess">Success</div>`}
                 <br />
-                {`<div className="alert bgWarning">Warning</div>`}
+                {`<div class="alert bgWarning">Warning</div>`}
               </p>
               <div className="alert">Default</div>
               <div className="alert bgPrimary">Primary</div>
@@ -52,6 +52,44 @@ export default class Components extends React.Component {
                 name="--alert-bg-color"
                 fallbackValue={this.state.primaryColor}
               />
+            </div>
+          )}
+        />
+
+        <Block
+          nav="button.css"
+          title="button.css"
+          demo={() => (
+            <div>
+              <p className="code pad1">
+                {`<button>Default</button>`}
+                <br />
+                {`<button class="isOutline">Default</button>`}
+                <br />
+                {`<button disabled>Disabled</button>`}
+              </p>
+              <div className="padB1">
+                <button>Default</button>
+              </div>
+              <div className="padB1">
+                <button className="isOutline">Outline</button>
+              </div>
+              <div>
+                <button disabled>Disabled</button>
+              </div>
+            </div>
+          )}
+          editor={() => (
+            <div>
+              <NumberPicker name="--button-font-family" />
+              <NumberPicker name="--button-font-size" />
+              <NumberPicker name="--button-font-weight" />
+              <NumberPicker name="--button-border-radius" />
+              <NumberPicker name="--button-border-width" />
+              <NumberPicker name="--button-padding" />
+              <NumberPicker name="--button-speed" />
+              <ColorPicker name="--button-color" />
+              <ColorPicker name="--button-bg-color" />
             </div>
           )}
         />
