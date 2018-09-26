@@ -133,19 +133,19 @@ export default class Components extends React.Component {
             <div>
               <p className="code pad1">
                 {`<ul class="dropdown">`}
-                <div className="padL1">
+                <div class="padL1">
                   {`<li>`}
-                  <div className="padL1">{`<a href="">Element 1</a>`}</div>
+                  <div class="padL1">{`<a href="">Element 1</a>`}</div>
                   {`</li>`}
                 </div>
-                <div className="padL1">
+                <div class="padL1">
                   {`<li>`}
-                  <div className="padL1">{`<a href="">Element 2</a>`}</div>
+                  <div class="padL1">{`<a href="">Element 2</a>`}</div>
                   {`</li>`}
                 </div>
-                <div className="padL1">
+                <div class="padL1">
                   {`<li>`}
-                  <div className="padL1">{`<a href="">Element 3</a>`}</div>
+                  <div class="padL1">{`<a href="">Element 3</a>`}</div>
                   {`</li>`}
                 </div>
                 {`</ul>`}
@@ -170,6 +170,31 @@ export default class Components extends React.Component {
               <NumberPicker name="--dropdown-padding" />
               <ColorPicker name="--dropdown-bg-color" />
               <ColorPicker name="--dropdown-border-color" />
+            </div>
+          )}
+        />
+
+        <Block
+          nav="nav.css"
+          title="nav.css"
+          demo={() => (
+            <div>
+              <p className="code pad1">
+                {`<div class="chip">Default</div>`}
+                <br />
+              </p>
+              <div className="nav">
+                <div className="navLeft">Left</div>
+                <div className="navCenter">Center</div>
+                <div className="navRight">Right</div>
+              </div>
+            </div>
+          )}
+          editor={() => (
+            <div>
+              <NumberPicker name="--nav-height" />
+              <NumberPicker name="--nav-padding" />
+              <ColorPicker name="--nav-link-color" />
             </div>
           )}
         />
