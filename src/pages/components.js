@@ -26,17 +26,11 @@ export default class Components extends React.Component {
         <Block
           nav="alert.css"
           title="alert.css"
+          code={['<div class="alert">Default</div>',
+            '<div class="alert bgPrimary">Primary</div>'
+          ]}
           demo={() => (
             <div>
-              <p className="code pad1">
-                {`<div class="alert">Default</div>`}
-                <br />
-                {`<div class="alert bgPrimary">Primary</div>`}
-                <br />
-                {`<div class="alert bgSuccess">Success</div>`}
-                <br />
-                {`<div class="alert bgWarning">Warning</div>`}
-              </p>
               <div className="alert">Default</div>
               <div className="alert bgPrimary">Primary</div>
               <div className="alert bgSuccess">Success</div>
@@ -59,17 +53,18 @@ export default class Components extends React.Component {
         <Block
           nav="button.css"
           title="button.css"
+          code={['<button>Default</button>',
+            '<button className="isLink">Link</button>',
+            '<button className="isOutline">Outline</button>',
+            '<button disabled>Outline</button>'
+          ]}          
           demo={() => (
             <div>
-              <p className="code pad1">
-                {`<button>Default</button>`}
-                <br />
-                {`<button class="isOutline">Default</button>`}
-                <br />
-                {`<button disabled>Disabled</button>`}
-              </p>
               <div className="padB1">
                 <button>Default</button>
+              </div>
+              <div className="padB1">
+                <button className="isLink">Link</button>
               </div>
               <div className="padB1">
                 <button className="isOutline">Outline</button>
@@ -97,13 +92,12 @@ export default class Components extends React.Component {
         <Block
           nav="chip.css"
           title="chip.css"
+          code={[
+            `<div class="chip">Default</div>`,
+            `<a class="chip">Link<a>`
+          ]}
           demo={() => (
             <div>
-              <p className="code pad1">
-                {`<div class="chip">Default</div>`}
-                <br />
-                {`<a class="chip">Link<a>`}
-              </p>
               <div className="chip marR1">Default</div>
               <a href="" className="chip">
                 Link
@@ -129,36 +123,24 @@ export default class Components extends React.Component {
         <Block
           nav="dropdown.css"
           title="dropdown.css"
+          code={[
+            `<ul class="dropdown">`,
+            `<li><div>Title</div></li>`,
+            `<li><a href="">Element 1</a></li>`,
+            `<li><a href="">Element 2</a></li>`,
+            `</ul>`,
+          ]}
           demo={() => (
             <div>
-              <p className="code pad1">
-                {`<ul class="dropdown">`}
-                <div class="padL1">
-                  {`<li>`}
-                  <div class="padL1">{`<a href="">Element 1</a>`}</div>
-                  {`</li>`}
-                </div>
-                <div class="padL1">
-                  {`<li>`}
-                  <div class="padL1">{`<a href="">Element 2</a>`}</div>
-                  {`</li>`}
-                </div>
-                <div class="padL1">
-                  {`<li>`}
-                  <div class="padL1">{`<a href="">Element 3</a>`}</div>
-                  {`</li>`}
-                </div>
-                {`</ul>`}
-              </p>
               <ul className="dropdown">
+                <li>
+                  <div className="small uppercase bold">Title</div>
+                </li>
                 <li>
                   <a href="">Element 1</a>
                 </li>
                 <li>
                   <a href="">Element 2</a>
-                </li>
-                <li>
-                  <a href="">Element 3</a>
                 </li>
               </ul>
             </div>
@@ -177,19 +159,15 @@ export default class Components extends React.Component {
         <Block
           nav="nav.css"
           title="nav.css"
+          code={[
+            `<div className="nav">`,
+            `<div class="navLeft">Left</div>`,
+            `<div class="navCenter">Center</div>`,
+            `<div class="navRight">Right</div>`,
+            `</div>`
+          ]}
           demo={() => (
             <div>
-              <p className="code pad1">
-                {`<div className="nav">`}
-                <div className="padL1">
-                  {`<div class="navLeft">Left</div>`}
-                  <br />
-                  {`<div class="navCenter">Center</div>`}
-                  <br />
-                  {`<div class="navRight">Right</div>`}
-                </div>
-                {`</div>`}
-              </p>
               <div className="nav">
                 <div className="navLeft">Left</div>
                 <div className="navCenter">Center</div>
@@ -209,34 +187,22 @@ export default class Components extends React.Component {
         <Block
           nav="tab.css"
           title="tab.css"
+          code={[
+            `<div class="tab">`,
+            `<a href="">Default 1</a>`,
+            `<a href="">Default 2</a>`,
+            `</div>`,
+            `<div class="tab isSimple">`,
+            `<a href="">Simple 1</a>`,
+            `<a href="">Simple 2</a>`,
+            `</div>`,
+            `<div class="tab isFull">`,
+            `<a href="">Full 1</a>`,
+            `<a href="">Full 2</a>`,
+            `</div>`
+          ]}
           demo={() => (
             <div>
-              <p className="code pad1">
-                {`<div class="tab">`}
-                <div className="padL1">
-                  {`<a href="">Default 1</a>`}
-                  <br />
-                  {`<a href="">Default 2</a>`}
-                </div>
-                {`</div>`}
-                <br />
-                {`<div class="tab isSimple">`}
-                <div className="padL1">
-                  {`<a href="">Simple 1</a>`}
-                  <br />
-                  {`<a href="">Simple 2</a>`}
-                </div>
-                {`</div>`}
-                <br />
-                {`<div class="tab isFull">`}
-                <div className="padL1">
-                  {`<a href="">Full 1</a>`}
-                  <br />
-                  {`<a href="">Full 2</a>`}
-                </div>
-                {`</div>`}
-                <br />
-              </p>
               <div className="tab">
                 <a href="">Default 1</a>
                 <a href="">Default 2</a>
@@ -264,17 +230,14 @@ export default class Components extends React.Component {
         <Block
           nav="table.css"
           title="table.css"
+          code={[
+            `<table>...</table>`,
+            `<table class="isBordered">...</table>`,
+            `<table class="isStriped">...</table>`,
+            `<table class="isHoverable">...</table>`,
+          ]}
           demo={() => (
             <div>
-              <p className="code pad1">
-                {`<table>...</table>`}
-                <br />
-                {`<table class="isBordered">...</table>`}
-                <br />
-                {`<table class="isStriped">...</table>`}
-                <br />
-                {`<table class="isHoverable">...</table>`}
-              </p>
               <table>
                 <tr>
                   <th>Default A</th>
