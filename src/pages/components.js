@@ -93,6 +93,38 @@ export default class Components extends React.Component {
             </div>
           )}
         />
+
+        <Block
+          nav="chip.css"
+          title="chip.css"
+          demo={() => (
+            <div>
+              <p className="code pad1">
+                {`<div class="chip">Default</div>`}
+                <br />
+                {`<a class="chip">Link<a>`}
+              </p>
+              <div className="chip marR1">Default</div>
+              <a href="" className="chip">
+                Link
+              </a>
+            </div>
+          )}
+          editor={() => (
+            <div>
+              <NumberPicker name="--chip-font-size" />
+              <NumberPicker name="--chip-border-radius" />
+              <NumberPicker name="--chip-padding" />
+              <NumberPicker name="--chip-speed" />
+              <NumberPicker name="--chip-weight" />
+              <NumberPicker name="--chip-focus" />
+              <ColorPicker name="--chip-color" />
+              <ColorPicker name="--chip-bg-color" />
+              <ColorPicker name="--chip-border-color" />
+              <ColorPicker name="--chip-link-color" />
+            </div>
+          )}
+        />
       </div>
     )
   }
