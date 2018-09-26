@@ -212,21 +212,51 @@ export default class Components extends React.Component {
           demo={() => (
             <div>
               <p className="code pad1">
-                {`<div class="chip">Default</div>`}
+                {`<div class="tab">`}
+                <div className="padL1">
+                  {`<a href="">Default 1</a>`}
+                  <br />
+                  {`<a href="">Default 2</a>`}
+                </div>
+                {`</div>`}
+                <br />
+                {`<div class="tab isSimple">`}
+                <div className="padL1">
+                  {`<a href="">Simple 1</a>`}
+                  <br />
+                  {`<a href="">Simple 2</a>`}
+                </div>
+                {`</div>`}
+                <br />
+                {`<div class="tab isFull">`}
+                <div className="padL1">
+                  {`<a href="">Full 1</a>`}
+                  <br />
+                  {`<a href="">Full 2</a>`}
+                </div>
+                {`</div>`}
                 <br />
               </p>
-              <div className="nav">
-                <div className="navLeft">Left</div>
-                <div className="navCenter">Center</div>
-                <div className="navRight">Right</div>
+              <div className="tab">
+                <a href="">Default 1</a>
+                <a href="">Default 2</a>
+              </div>
+              <div className="tab isSimple padT1">
+                <a href="">Simple 1</a>
+                <a href="">Simple 2</a>
+              </div>
+              <div className="tab isFull padT1">
+                <a href="">Full 1</a>
+                <a href="">Full 2</a>
               </div>
             </div>
           )}
           editor={() => (
             <div>
-              <NumberPicker name="--nav-height" />
-              <NumberPicker name="--nav-padding" />
-              <ColorPicker name="--nav-link-color" />
+              <NumberPicker name="--tab-padding" />
+              <NumberPicker name="--tab-border" />
+              <ColorPicker name="--tab-color" />
+              <ColorPicker name="--tab-border-color" />
             </div>
           )}
         />
