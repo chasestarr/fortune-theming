@@ -42,14 +42,13 @@ const Layout = ({ children, data }) => (
             </a>
           </li>
           <li className="marB4 isGap">
-            <a className="gray bold isDisabled">
-              Layout
+            <a href="/components" className="gray bold">
+              Components
             </a>
           </li>
-
           <li className="marB4 isGap">
             <a className="gray bold isDisabled">
-              Components
+              Layout
             </a>
           </li>
           <li className="marB4 isGap">

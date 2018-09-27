@@ -45,7 +45,6 @@ class ColorPicker extends React.Component {
           className="small marB1 wid100"
           style={{
             backgroundColor: this.state.color,
-            borderColor: this.state.color,
             '--button-padding': '0.25rem 0.5rem',
           }}
         >

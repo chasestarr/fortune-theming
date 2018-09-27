@@ -14,6 +14,11 @@ $variable-columns: false;
   text-overflow: ellipsis;
 }
 
+.editor button{
+  --button-color: white;
+  border-color: var(--silver);
+}
+
 @media screen and (max-width: 48rem) {
   :root {
     font-size: 14px;
