@@ -338,14 +338,13 @@ export default class Components extends React.Component {
           )}
           editor={() => (
             <div>
-              <NumberPicker name="--table-spacing-y" />
               <NumberPicker name="--table-border-width" />
-              <NumberPicker name="--table-border-color" />
               <NumberPicker name="--table-spacing-y" />
               <NumberPicker name="--table-spacing-x" />
+              <ColorPicker name="--table-border-color" />
               <ColorPicker name="--table-bg-color" />
               <ColorPicker name="--table-header-bg-color" />
-              <ColorPicker name="--table-border-color" />
+              <ColorPicker name="--table-hover-color" />
               <ColorPicker name="--table-hover-bg-color" />
               <ColorPicker name="--table-stripe-bg-color" />
             </div>
