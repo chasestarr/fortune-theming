@@ -8,11 +8,9 @@ export default () => (
     <Block
       nav="column.css"
       title="column.css"
-      body={() => (
-        <p>
-          Contains flex box columns.
-        </p>        
-      )}
+      code={[
+        `<div class="cols isFlush">`,`<div class="col isOrder2">…</div>`,`<div class="col isOrder1">…</div>`,`</div>`
+      ]}            
       demo={() => (
         <div className="relative">
           <div className="cols marB1">
@@ -47,11 +45,9 @@ export default () => (
     <Block
       nav="dimension.css"
       title="dimension.css"
-      body={() => (
-        <p>
-          Contains width, height, viewport width, viewport heigh and max width.
-        </p>        
-      )}
+      code={[
+        `<div class="wid3">…</div>`,`<div class="viewHt25">…</div>`
+      ]}                  
       demo={() => (
         <div>
           <p className="wid3 bgLight">wid3</p>
@@ -69,33 +65,18 @@ export default () => (
     <Block
       nav="flex.css"
       title="flex.css"
-      body={() => (
-        <p>
-          Contains flexbox utilities.
-        </p>        
-      )}
       reference={['flex', 'flexWrap', 'flexWrapReverse', 'flexReverse', 'flexReverse flexCol', 'flexCol', 'flexRow', 'flexCenter', 'flexYCenter', 'flexXCenter', 'flexAround', 'flexBetween', 'flexRight', 'flexBaseline', 'flexEnd', 'flexStart', 'grow[1-9]', 'selfCenter', 'selfStart', 'selfEnd', 'selfBaseline']}
     />
     <Block
       nav="grid.css"
       title="grid.css"
-      body={() => (
-        <p>
-          Contains flexbox utilities.
-        </p>        
-      )}
       reference={['grid', 'gridGap0', 'gridGap[1-5', 'gridGap[X,Y][1-5]', 'gridCols --', 'gridCols1-9', 'gridRows --', 'gridRows1-9', 'gridRow --', 'gridRowSpan[1-9]', 'gridCol --', 'gridColSpan[1-9]']}
     />
     <Block
       nav="position.css"
       title="position.css"
-      body={() => (
-        <p>
-          Contains padding and margin.
-        </p>        
-      )}
       code={[
-        `<table>...</table>`,
+        `<div class="marL2">…</div>`, `<div class="padL2">…</div>`
       ]}      
       demo={() => (
         <div className="">
