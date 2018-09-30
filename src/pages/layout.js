@@ -6,54 +6,53 @@ import NumberPicker from '../components/numberPicker'
 export default () => (
   <div>
     <Block
-      nav="position.css"
-      title="position.css"
-      body={() => (
-        <p>
-          Contains padding and margin.
-        </p>        
-      )}
+      nav="column.css"
+      title="column.css"
+      code={[
+        `<div class="cols isFlush">`,`<div class="col isOrder2">…</div>`,`<div class="col isOrder1">…</div>`,`</div>`
+      ]}            
       demo={() => (
-        <div className="violet bold">
-          <p className="marL0">marL0</p>
-          <p className="marL1">marL1</p>
-          <p className="marL2">marL2</p>
-          <p className="marL3">marL3</p>
-          <p className="marL4">marL4</p>
-          <p className="marL5">marL5</p>
-          <p className="marL6">marL6</p>
-          <p className="marL7">marL7</p>
-          <p className="marL8">marL8</p>
-          <p className="marL9">marL9</p>
+        <div className="relative">
+          <div className="cols marB1">
+            <div className="col2 bgLight">col2</div>
+            <div className="col4 bgSmoke">col4</div>
+            <div className="col3 bgLight">col3</div>
+            <div className="col1 bgSmoke">col1</div>
+            <div className="col2 bgLight">col2</div>
+          </div>
+          <div className="cols marB1">
+            <div className="col bgLight isOrder5">isOrder5</div>
+            <div className="col bgSmoke isOrder4">isOrder4</div>
+            <div className="col bgLight isOrder3">isOrder3</div>
+            <div className="col bgSmoke isOrder2">isOrder2</div>
+            <div className="col bgLight isOrder1">isOrder1</div>
+          </div>
+          <div className="cols isFlush marB1">
+            <div className="col bgLight">isFlush > col</div>
+            <div className="col bgSmoke">col</div>
+            <div className="col bgLight">col</div>
+          </div>
+          <div className="cols isFull marB1">
+            <div className="col3 bgLight">isFull > col3</div>
+            <div className="col3 bgSmoke">col3</div>
+            <div className="col3 bgLight">col3</div>
+            <div className="col3 bgSmoke">col3</div>
+          </div>
         </div>
       )}
-      reference={['mar1', 'marT1', 'marR1', 'marB1', 'marL1', 'marX1', 'marY1', 'marXAuto', 'pad1', 'padT1', 'padR1', 'padB1', 'padL1', 'padX1', 'padY1']}
-      editor={() => (
-        <div>
-          <NumberPicker name="--space-1" />
-          <NumberPicker name="--space-2" />
-          <NumberPicker name="--space-3" />
-          <NumberPicker name="--space-4" />
-          <NumberPicker name="--space-5" />
-          <NumberPicker name="--space-6" />
-          <NumberPicker name="--space-7" />
-          <NumberPicker name="--space-8" />
-          <NumberPicker name="--space-9" />          
-        </div>
-      )}
-    />
+      reference={['cols', 'row', 'cols cols', 'isFull', 'isFlush', 'cols', 'cols[1-12]', 'isOrder[1-12]', 'isOffset[1-12]', 'multiCol[2-5]']}
+    />      
     <Block
       nav="dimension.css"
       title="dimension.css"
-      body={() => (
-        <p>
-          Contains width, height, viewport width, viewport heigh and max width.
-        </p>        
-      )}
+      code={[
+        `<div class="wid3">…</div>`,`<div class="viewHt25">…</div>`
+      ]}                  
       demo={() => (
         <div>
-          <p className="wid2 bgLight">wid2</p>
-          <p className="wid4 bgLight">wid4</p>
+          <p className="wid3 bgLight">wid3</p>
+          <p className="wid6 bgLight">wid6</p>
+          <p className="wid50 bgLight">wid50</p>
           <p className="ht2 bgLight">ht2</p>
           <p className="ht4 bgLight">ht4</p>
           <p className="viewWid25 bgLight">viewWid25</p>
@@ -61,6 +60,41 @@ export default () => (
           <p className="maxWid6 bgLight">maxWid6</p>          
         </div>
       )}
-    />    
+      reference={['ht[0-9,25,33,50,75,100]', 'viewHt[25,33,50,75,100]', 'wid[0-9,25,33,50,75,100]', 'viewWid[25,33,50,75,100]', 'maxWid[0-9,25,33,50,75,100]']}
+    />
+    <Block
+      nav="flex.css"
+      title="flex.css"
+      reference={['flex', 'flexWrap', 'flexWrapReverse', 'flexReverse', 'flexReverse flexCol', 'flexCol', 'flexRow', 'flexCenter', 'flexYCenter', 'flexXCenter', 'flexAround', 'flexBetween', 'flexRight', 'flexBaseline', 'flexEnd', 'flexStart', 'grow[1-9]', 'selfCenter', 'selfStart', 'selfEnd', 'selfBaseline']}
+    />
+    <Block
+      nav="grid.css"
+      title="grid.css"
+      reference={['grid', 'gridGap0', 'gridGap[1-5', 'gridGap[X,Y][1-5]', 'gridCols --', 'gridCols1-9', 'gridRows --', 'gridRows1-9', 'gridRow --', 'gridRowSpan[1-9]', 'gridCol --', 'gridColSpan[1-9]']}
+    />
+    <Block
+      nav="position.css"
+      title="position.css"
+      code={[
+        `<div class="marL2">…</div>`, `<div class="padL2">…</div>`
+      ]}      
+      demo={() => (
+        <div className="">
+          <p className="marL2 bgLight">marL2</p>
+          <p className="marL4 bgLight">marL4</p>
+          <p className="pad1 bgLight">pad1</p>
+          <p className="pad2 bgLight">pad2</p>
+          <p className="marXauto wid50 center">marXAuto</p>
+        </div>
+      )}
+      reference={['mar[0-9]', 'mar[T,R,B,L][0-9]', 'marXAuto', 'pad[0-9]', 'pad[T,R,B,L][0-9]']}
+      editor={() => (
+        <div>
+          <NumberPicker name="--space-1" />
+          <NumberPicker name="--space-2" />
+          <NumberPicker name="--space-4" />
+        </div>
+      )}
+    />  
   </div>
 )

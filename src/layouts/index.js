@@ -33,33 +33,47 @@ const Layout = ({ children, data }) => (
           </li>
           <li className="marL4 marB4 isGap">
             <a href="/#variables" className="gray bold">
-              Variables
+              Variable
             </a>
           </li>
           <li className="marL4 marB4 isGap">
             <a href="/#tokens" className="gray bold">
-              Tokens
-            </a>
-          </li>
-          <li className="marB4 isGap">
-            <a href="/components" className="gray bold">
-              Components
+              Token
             </a>
           </li>
           <li className="marB4 isGap">
             <a className="gray bold isDisabled">
+              Element
+            </a>
+          </li>          
+          <li className="marB4 isGap">
+            <a href="/components" className="gray bold">
+              Component
+            </a>
+          </li>
+          <li className="marB4 isGap">
+            <a href="/layout" className="gray bold">
               Layout
             </a>
           </li>
-          <li className="marB4 isGap">
+          <li className="isGap">
             <a className="gray bold isDisabled">
-              Utilities
+              Utility
             </a>
           </li>
-
-          <li className="marB4 isGap">
-            <a href="https://github.com/atav1k/fortune" className="gray bold">
+          <li className="marT4">
+            <a href="https://github.com/atav1k/fortune" className="bold">
               Github
+            </a>
+          </li>
+          <li className="marT4 isGap dark">
+          Fortune by
+        </li>
+          <li className="">
+            <a href="https://twitter.com/atav1k/" className="gray">
+              @atav1k
+            </a> & <a href="https://twitter.com/captivechains/" className=" gray">
+              @captivechains
             </a>
           </li>
         </ul>
